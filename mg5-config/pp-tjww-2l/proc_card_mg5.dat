@@ -33,10 +33,21 @@ define p = g u c d s u~ c~ d~ s~
 define j = g u c d s u~ c~ d~ s~
 define l+ = e+ mu+
 define l- = e- mu-
-define vl = ve vm vt
-define vl~ = ve~ vm~ vt~
+define vl = ve vm
+define vl~ = ve~ vm~
+set stdout_level DEBUG
 import model EWdim6
 define p = p b b~
 define j = p
-generate p p > l+ vl l- vl~ t j / h z a NP==2
-output ppToWpWmTJ-wlepwlep
+generate p p > w+ w- t j / h z a NP==2
+output PROC_tjww_2l
+launch
+madspin=none
+analysis=MadAnalysis5
+done
+set nevents 50000
+decay w+ > l+ vl
+decay w- > l- vl~
+done
+
+
