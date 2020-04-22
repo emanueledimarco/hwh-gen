@@ -28,26 +28,25 @@ set loop_color_flows False
 set gauge unitary
 set complex_mass_scheme False
 set max_npoint_for_channel 0
-import model sm
+import model sm-ckm_no_b_mass
 define p = g u c d s u~ c~ d~ s~
 define j = g u c d s u~ c~ d~ s~
 define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm
 define vl~ = ve~ vm~
-set stdout_level DEBUG
-import model EWdim6
 define p = p b b~
 define j = p
-generate p p > w+ w- t j / h z a NP==2
-output PROC_tjww_2l
-launch
-madspin=none
+generate p p > w+ w- j t QED=4 QCD=0, w+ > l+ vl, w- > l- vl~ @1
+add process p p > w+ w- j t~ QED=4 QCD=0, w+ > l+ vl, w- > l- vl~ @2
+output PROC_tjww-2l
+launch -i
+multi_run 10
 analysis=MadAnalysis5
+madspin=ON
 done
 set nevents 50000
-decay w+ > l+ vl
-decay w- > l- vl~
 done
+
 
 

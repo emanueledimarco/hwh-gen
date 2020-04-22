@@ -35,21 +35,15 @@ define l+ = e+ mu+
 define l- = e- mu-
 define vl = ve vm
 define vl~ = ve~ vm~
-set stdout_level DEBUG
-import model EWdim6
 define p = p b b~
 define j = p
-generate p p > w+ z t j / h z a NP==2
-add process p p > w- z t j / h z a NP==2
-output PROC_tjww_2l
+generate p p > w+ z j t~ QED=6 QCD=0 / a h, w+ > j j, z > l+ l-
+add process p p > w- z j t QED=6 QCD=0 / a h, w- > j j, z > l+ l-
+output PROC_tjwz-2l
 launch
-madspin=none
 analysis=MadAnalysis5
 done
 set nevents 50000
-decay w+ > j j 
-decay w- > j j
-decay z > l+ l-
 done
 
 
