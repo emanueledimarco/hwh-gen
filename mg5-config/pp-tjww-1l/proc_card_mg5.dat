@@ -37,10 +37,10 @@ define vl = ve vm
 define vl~ = ve~ vm~
 define p = p b b~
 define j = p
-generate p p > w+ w- j t QED=6 QCD=0 / z a h, w+ > l+ vl, w- > j j
-add process p p > w+ w- j t QED=6 QCD=0 / z a h, w+ > j j, w- > l- vl~
-add process p p > w+ w- j t~ QED=6 QCD=0 / z a h, w+ > l+ vl, w- > j j
-add process p p > w+ w- j t~ QED=6 QCD=0 / z a h, w+ > j j, w- > l- vl~
+generate p p > w+ w- j t QED=6 QCD=0, w+ > l+ vl, w- > j j
+add process p p > w+ w- j t  QED=6 QCD=0, w+ > j j, w- > l- vl~
+add process p p > w+ w- j t~ QED=6 QCD=0, w+ > l+ vl, w- > j j
+add process p p > w+ w- j t~ QED=6 QCD=0, w+ > j j, w- > l- vl~
 output PROC_tjww-1l
 launch -i
 multi_run 10

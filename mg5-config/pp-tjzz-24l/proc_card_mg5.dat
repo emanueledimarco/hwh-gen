@@ -37,10 +37,13 @@ define vl = ve vm
 define vl~ = ve~ vm~
 define p = p b b~
 define j = p
-generate p p > w+ z j t~ QED=6 QCD=0 / a h, w+ > l+ vl, z > j j
-add process p p > w- z j t QED=6 QCD=0 / a h, w- > l- vl~, z > j j
-output PROC_tjwz-1l
-launch
+generate p p > z z j t~    QED=6 QCD=0 / a h, (z > l+ l-), (z > j j)
+add process p p > z z j t  QED=6 QCD=0 / a h, (z > l+ l-), (z > j j)
+add process p p > z z j t~ QED=6 QCD=0 / a h, (z > l+ l-), (z > l+ l-)
+add process p p > z z j t  QED=6 QCD=0 / a h, (z > l+ l-), (z > l+ l-)
+output PROC_tjzz-24l
+launch -i
+multi_run 10
 analysis=MadAnalysis5
 done
 set nevents 50000
