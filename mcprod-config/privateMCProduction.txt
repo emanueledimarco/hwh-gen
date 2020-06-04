@@ -1,0 +1,42 @@
+0. === GEN - SIM (hadronization + SIM) ===
+The LHE are made with Madgraph LO undecayed. Need to run the GEN step to hadronize with PYTHIA generic hadronizer.
+Releases need to be year-specific:
+- 2016: CMSSW_7_1_X (SLC6)
+- 2017: CMSSW_9_3_X (SLC7)
+- 2018: CMSSW_10_2_X (SLC7)
+
+I made only 2018, in CMSSW_10_2_6.
+
+- cmsRun cmsRun hwh_0_cfg.py 
+
+input:  undecayed LHE files
+output: hwh-RunIIAutumn18GENSIM.root (RAWSIM)
+
+
+1. === HLT ===
+Needs to be done in CMSSW_10_2_20_UL (for 2018 at least)
+
+- cmsRun hwh_1_cfg.py
+
+input:  hwh-RunIIAutumn18GENSIM.root
+output: hwh-RunIISummer19UL18HLT.root (RAWSIMHLT)
+
+
+2. === RECO + MINIAOD ===
+For 2018 done in CMSSW_10_2_6
+
+- cmsRun hwh_2_cfg.py
+
+input:  hwh-RunIISummer19UL18HLT.root
+output: hwh-RunIIAutumn18MiniAOD-FullSim.root (MINIAODSIM)
+
+
+3. === NANOAOD === 
+For 2018 done in CMSSW_10_2_6
+
+- cmsRun hwh_3_cfg.py
+
+input:  hwh-RunIIAutumn18MiniAOD-FullSim.root
+output: hwh-RunIIAutumn18NanoAODv4_FullSim.root (NANOAODSIM)
+
+
