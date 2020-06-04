@@ -25,6 +25,6 @@ for step in range(nfiles-1):
     cmd2 = "mv {tmpfile} {infile}".format(tmpfile=tmpfile,infile=residualfile)
     os.system(cmd1)
     os.system(cmd2)
-os.system("mv {tmpfile} {lastchunk}".format(tmpfile=tmpfile,lastchunk=basename+'_chunk'+str(step+1)+'.lhe'))
+os.system("mv {residual} {lastchunk}".format(residual=residualfile,lastchunk=basename+'_chunk'+str(step+1)+'.lhe'))
 print "DONE."
 
