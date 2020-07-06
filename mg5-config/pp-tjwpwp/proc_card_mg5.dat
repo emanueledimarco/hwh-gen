@@ -1,5 +1,5 @@
 #
-import model ./Yt_UFO/
+import model /afs/cern.ch/work/e/emanuele/hwh/mcprod/CMSSW_10_6_12/src/hwh-gen/mg5-config/Yt_UFO/
 define p = g u c d s u~ c~ d~ s~
 define j = g u c d s u~ c~ d~ s~
 define l+ = e+ mu+
