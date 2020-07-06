@@ -1,5 +1,5 @@
 #
-import model /afs/cern.ch/work/e/emanuele/hwh/mcprod/CMSSW_10_6_12/src/hwh-gen/mYt_UFO/
+import model ./Yt_UFO/
 define p = g u c d s u~ c~ d~ s~
 define j = g u c d s u~ c~ d~ s~
 define l+ = e+ mu+
@@ -13,7 +13,7 @@ add process p p > j w+ w- t  QCD=0 QED=99  QNP=2, w+ > j j, w- > l- vl~
 add process p p > j w+ w- t~ QCD=0 QED=99  QNP=2, w+ > l+ vl, w- > j j
 add process p p > j w+ w- t~ QCD=0 QED=99  QNP=2, w+ > j j, w- > l- vl~
 add process p p > j w+ w- t  QCD=0 QED=99  QNP=2, w+ > l+ vl, w- > l- vl~
-add process p p > w+ w- j t~ QCD=0 QED=99  QNP=2, w+ > l+ vl, w- > l- vl~
+add process p p > j w+ w- t~ QCD=0 QED=99  QNP=2, w+ > l+ vl, w- > l- vl~
 output yt_SCAN_WpWm
 launch
 madspin=ON

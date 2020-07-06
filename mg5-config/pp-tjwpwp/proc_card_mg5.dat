@@ -1,0 +1,27 @@
+#
+import model ./Yt_UFO/
+define p = g u c d s u~ c~ d~ s~
+define j = g u c d s u~ c~ d~ s~
+define l+ = e+ mu+
+define l- = e- mu-
+define vl = ve vm
+define vl~ = ve~ vm~
+define p = p b b~
+define j = p
+generate p p > j w+ w+ t~    QCD=0 QED=99  QNP=2, (w+ > l+ vl),  (w+ > j j)
+add process p p > j w+ w+ t~ QCD=0 QED=99  QNP=2, (w+ > j j),    (w+ > l+ vl)
+add process p p > j w+ w+ t~ QCD=0 QED=99  QNP=2, (w+ > l+ vl),  (w+ > l+ vl)
+add process p p > j w- w- t  QCD=0 QED=99  QNP=2, (w- > l- vl~), (w- > j j)
+add process p p > j w- w- t  QCD=0 QED=99  QNP=2, (w- > j j),    (w- > l- vl~)
+add process p p > j w- w- t  QCD=0 QED=99  QNP=2, (w- > l- vl~), (w- > l- vl~)
+output yt_SCAN_WpWp
+launch
+madspin=ON
+0
+set nevents = 100000
+set ebeam = 7000
+set cu = scan1:(-5,-1,0,0.3,0.8)
+set pt_min_pdg = {6:250}
+set pt_max_pdg = {6:50000}
+set ptj = 20
+0
