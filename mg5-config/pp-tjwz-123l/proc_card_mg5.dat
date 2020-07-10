@@ -14,13 +14,13 @@ add process p p > w+ z j t~ QCD=0 QED=99  QNP=2, w+ > j j, z > l+ l-
 add process p p > w- z j t  QCD=0 QED=99  QNP=2, w- > j j, z > l+ l-
 add process p p > w+ z j t~ QCD=0 QED=99  QNP=2, w+ > l+ vl, z > l+ l-
 add process p p > w- z j t  QCD=0 QED=99  QNP=2, w- > l- vl~, z > l+ l-
-output yt_SCAN_WZ
+output yt_0_WZ_100k
 launch
 madspin=ON
 0
 set nevents = 100000
-set ebeam = 7000
-set cu = scan1:(-5,-1,0,0.3,0.8)
+set ebeam = 6500
+set cu = 0
 set pt_min_pdg = {6:250}
 set pt_max_pdg = {6:50000}
 set ptj = 20

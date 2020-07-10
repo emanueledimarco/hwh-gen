@@ -1,11 +1,6 @@
 #!/bin/env python
 
-# usage: python submitToys.py cards_el/Wel_card_withXsecMask.hdf5 10000 -n 20 --outdir toys -r 8
-#
-# python w-helicity-13TeV/submitToys.py cards/diffXsec_2018_06_29_group10_absGenEta_moreEtaPtBin/Wel_plus_card_withXsecMask.meta 11000 -n 2 --outdir toys/diffXsec_2018_06_29_group10_absGenEta_moreEtaPtBin_newGenXsec/ -t 1 -q cmscaf1nd
-#
-# python w-helicity-13TeV/submitToys.py cards/diffXsec_mu_2018_11_24_group10_onlyBkg/Wmu_card_withXsecMask_sparse_outBkgNorm3p8_noSyst.hdf5 11000 -n 5 -t 1 -r 24 --outdir toys/diffXsec_mu_2018_11_24_group10_onlyBkg_noSyst/
-
+# usage: ./submitMG5.py -t 6 -r 48 --outdir pp-tjwpwm/ pp-tjwpwm/proc_card_mg5.dat
 
 jobstring  = '''#!/bin/sh
 ulimit -c 0 -S
