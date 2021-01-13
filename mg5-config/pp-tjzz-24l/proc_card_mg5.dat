@@ -12,14 +12,14 @@ generate p p > z z j t~    QCD=0 QED=99  QNP=2 / a h, (z > l+ l-), (z > j j)
 add process p p > z z j t  QCD=0 QED=99  QNP=2 / a h, (z > l+ l-), (z > j j)
 add process p p > z z j t~ QCD=0 QED=99  QNP=2 / a h, (z > l+ l-), (z > l+ l-)
 add process p p > z z j t  QCD=0 QED=99  QNP=2 / a h, (z > l+ l-), (z > l+ l-)
-output yt_0_ZZ_100k
+output yt_0_ZZ_TptIncl
 launch
 madspin=ON
 0
 set nevents = 100000
 set ebeam = 6500
 set cu = 0
-set pt_min_pdg = {6:250}
-set pt_max_pdg = {6:50000}
+#set pt_min_pdg = {6:250}
+#set pt_max_pdg = {6:50000}
 set ptj = 20
 0

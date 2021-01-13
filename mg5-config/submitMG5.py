@@ -31,7 +31,7 @@ Log        = {ld}/$(ProcId).log
 Output     = {od}/$(ProcId).out
 Error      = {ed}/$(ProcId).error
 getenv      = True
-next_job_start_delay = 1
+#next_job_start_delay = 1
 environment = "LS_SUBCWD={here}"
 +MaxRuntime = {rt}\n
 '''.format(de=os.path.abspath(dummy_exec.name), ld=os.path.abspath(logdir), od=os.path.abspath(outdirCondor),ed=os.path.abspath(errdir),
