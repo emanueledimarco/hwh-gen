@@ -102,7 +102,10 @@ if __name__ == "__main__":
     cf = makeCondorFile(jobdir,srcfiles,options, logdir, errdir, outdirCondor)
     subcmd = 'condor_submit {rf} '.format(rf = cf)
 
-    print subcmd
+    if options.dryRun:
+        print subcmd
+    else:
+        os.system(subcmd)
 
     sys.exit()
 
